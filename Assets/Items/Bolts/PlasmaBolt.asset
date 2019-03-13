@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641aa501e33c5e744893fcd3b77d8c04, type: 3}
+  m_Name: PlasmaBolt
+  m_EditorClassIdentifier: 
+  item: {fileID: 2174688215592303822, guid: 15c7da3be04d4424a9fe4053f72fe379, type: 3}
+  boltType: 1
+  hitPrefab: {fileID: 7257039379234925009, guid: 42b4a5a04ed42f64d831ec2b9fa634a5,
+    type: 3}
+  trail: {fileID: 2100000, guid: 095a1aeab68554c47ab9a6cc45006d73, type: 2}
