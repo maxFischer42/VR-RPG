@@ -18,9 +18,12 @@ EditorBuildSettings:
     path: Assets/Oculus/SampleFramework/Usage/CustomControllers.unity
     guid: e0f49aa4174f98941b88699b5fecddc0
   - enabled: 0
-    path: Assets/VRBasics/Examples/Scenes/tankBelt.unity
+    path: 
     guid: a12987a8d1adcb946811e8de4c7f88d1
   - enabled: 0
-    path: Assets/VRBasics/Examples/Scenes/demoStation.unity
+    path: 
     guid: 75aa286b348ca884fa8f9c665550a403
+  - enabled: 1
+    path: Assets/Scenes/AIExample.unity
+    guid: 6365b231fc2b23d48bc8d777bc6af486
   m_configObjects: {}
