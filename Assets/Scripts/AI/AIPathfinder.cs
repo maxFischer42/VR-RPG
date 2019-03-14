@@ -5,35 +5,58 @@ using UnityEngine.AI;
 
 public class AIPathfinder : MonoBehaviour
 {
-    public Collider[] waypoints;
+    [Tooltip("X should be the basic movement speed, while Y should be the speed when chasing the player")]
     public Vector2 speed = new Vector2(1.7f, 3f);
+    public Collider[] waypoints;
     private Collider currentTarget;
-
+    public GameObject playerObject;
     private NavMeshAgent agent;
+    private MeshRenderer mrenderer;
+
+    //checks whether or not the player is in sight of the child object
+    public bool playerTarget;
 
     //for debug purposes, these will be applied to the waypoints
     //to see what is being targeted
     public Material waypointNormalMat;
     public Material waypointTargetMat;
+    //this will be applied whether or not the player is being targeted
+    public Material defaultMat;
+    public Material targetMat;
 
     private void Awake()
     {
         currentTarget = waypoints[RandomizeTargets(waypoints.Length)];
         SetMaterials();
         agent = GetComponent<NavMeshAgent>();
+        mrenderer = GetComponent<MeshRenderer>();
     }
 
 
     public void Update()
     {
-        agent.SetDestination(currentTarget.transform.position);
-        if (Mathf.Abs(agent.velocity.x) < 0.1f && Mathf.Abs(agent.velocity.z) < 0.1f)
-            ChangeTarget();
+        if (!playerTarget)
+        {
+            agent.speed = speed.x;
+            agent.SetDestination(currentTarget.transform.position);
+            mrenderer.material = defaultMat;
+            if (Mathf.Abs(agent.velocity.x) < 0.1f && Mathf.Abs(agent.velocity.z) < 0.1f)
+                ChangeTarget();
+        }
+        else if(playerTarget)
+        {
+            mrenderer.material = targetMat;
+            agent.speed = speed.y;
+            agent.SetDestination(playerObject.transform.position);
+        }
+        else
+        {
+            Debug.LogError("Bool can not equal null");
+        }
     }
 
     public void ChangeTarget()
     {
-        agent.speed = speed.x;
         Collider[] newBatch = GetOtherWaypoints();
         currentTarget = newBatch[RandomizeTargets(newBatch.Length)];
         SetMaterials();
