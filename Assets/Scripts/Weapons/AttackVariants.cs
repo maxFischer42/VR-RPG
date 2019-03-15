@@ -43,8 +43,6 @@ public class AttackVariants : MonoBehaviour
 
     }
 
-
-
     //returns whether or not the velocity checks out with the requirement
     //for the critical effect.
     public bool CheckVelocity(attackType _attackType, Vector3 _velocity)
@@ -59,5 +57,8 @@ public class AttackVariants : MonoBehaviour
         return _velocityCheck;
     }
 
-
+    public void Hit()
+    {
+        Vector3 tipVel;
+    }
 }
