@@ -36,6 +36,10 @@ public class OVRGrabbable : MonoBehaviour
     protected bool m_grabbedKinematic = false;
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
+    public bool sendMessage = false;
+    public GameObject messageReciever;
+    public string voidName;
+    public string messageName;
 
 	/// <summary>
 	/// If true, the object can currently be grabbed.
@@ -125,6 +129,10 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
         gameObject.transform.position = hand.transform.position;
+        if(sendMessage)
+        {
+            messageReciever.SendMessage(voidName, messageName);
+        }
         if(gameObject.name.Contains("Crossbow"))
         {
             gameObject.SendMessage("CrossbowGrab", hand.gameObject.name);
