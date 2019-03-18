@@ -12,7 +12,17 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Weapon"))
         {
-            collider.gameObject.GetComponent<AttackVariants>().Hit();
+            collider.transform.parent.gameObject.GetComponent<AttackVariants>().Hit(collider,name);
+        }
+    }
+
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            GameObject m_corpse = (GameObject)Instantiate(corpse, transform);
+            m_corpse.transform.parent = null;
+            Destroy(gameObject);
         }
     }
 

@@ -11,14 +11,22 @@ public class EnemyStop : MonoBehaviour
         if(other.gameObject.GetComponent<AIPathfinder>())
         {
             other.GetComponent<NavMeshAgent>().enabled = false;
+            other.gameObject.SendMessage("ChangeState", "ATTACK");
         }
     }
-
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<AIPathfinder>())
+        {
+            other.gameObject.SendMessage("ChangeState", "ATTACK");
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponent<AIPathfinder>())
         {
             other.GetComponent<NavMeshAgent>().enabled = true;
+            other.gameObject.SendMessage("ChangeState", "RUN");
         }
     }
 }

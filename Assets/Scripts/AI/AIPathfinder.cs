@@ -18,11 +18,11 @@ public class AIPathfinder : MonoBehaviour
 
     //for debug purposes, these will be applied to the waypoints
     //to see what is being targeted
-    public Material waypointNormalMat;
-    public Material waypointTargetMat;
+    private Material waypointNormalMat;
+    private Material waypointTargetMat;
     //this will be applied whether or not the player is being targeted
-    public Material defaultMat;
-    public Material targetMat;
+    private Material defaultMat;
+    private Material targetMat;
 
     private void Awake()
     {
@@ -39,15 +39,17 @@ public class AIPathfinder : MonoBehaviour
         {
             agent.speed = speed.x;
             agent.SetDestination(currentTarget.transform.position);
-            mrenderer.material = defaultMat;
+ //           mrenderer.material = defaultMat;
+            SendMessage("ChangeState", "WALK");
             if (Mathf.Abs(agent.velocity.x) < 0.1f && Mathf.Abs(agent.velocity.z) < 0.1f)
                 ChangeTarget();
         }
         else if(playerTarget)
         {
-            mrenderer.material = targetMat;
+//            mrenderer.material = targetMat;
             agent.speed = speed.y;
             agent.SetDestination(playerObject.transform.position);
+            SendMessage("ChangeState", "RUN");
         }
         else
         {
@@ -73,9 +75,9 @@ public class AIPathfinder : MonoBehaviour
     {
         for (int i = 0; i < waypoints.Length; i++)
         {
-            waypoints[i].GetComponent<MeshRenderer>().material = waypointNormalMat;
+//           waypoints[i].GetComponent<MeshRenderer>().material = waypointNormalMat;
         }
-        currentTarget.GetComponent<MeshRenderer>().material = waypointTargetMat;
+//        currentTarget.GetComponent<MeshRenderer>().material = waypointTargetMat;
     }
 
 

@@ -21,11 +21,12 @@ public class AIPlayerSearch : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 direction = player.transform.position - transform.position;
+        line.SetPosition(0, transform.position);
         if (Physics.Raycast(transform.position, direction, out hit, maxDistance, layerMask))
         {
             if(hit.collider)
             {
-                line.SetPosition(0, transform.position);
+                
                 line.SetPosition(1, hit.point);
                 if (hit.collider.gameObject.name == "Player")
                 {
