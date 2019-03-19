@@ -17,27 +17,36 @@ public class EnemyAnimator : MonoBehaviour
 
     private void Update()
     {
+
         if (!nav.enabled)
             currentState = EnemyState.Attack;
         switch(currentState)
         {
             case EnemyState.Idle:
-                anim.runtimeAnimatorController = Idle;
+                //anim.runtimeAnimatorController = Idle;
+                anim.SetBool("Idle", true);
                 break;
             case EnemyState.Walk:
-                anim.runtimeAnimatorController = Walk;
+                //anim.runtimeAnimatorController = Walk;
+                anim.SetBool("Walk", true);
                 break;
             case EnemyState.Run:
-                anim.runtimeAnimatorController = Run;
+                //anim.runtimeAnimatorController = Run;
+                anim.SetBool("Run", true);
                 break;
             case EnemyState.Attack:
-                anim.runtimeAnimatorController = Attack;
+                //anim.runtimeAnimatorController = Attack;
+                anim.SetBool("Attack", true);
                 break;
         }
     }
 
     public void ChangeState(string state)
     {
+        anim.SetBool("Idle", false);
+        anim.SetBool("Walk", false);
+        anim.SetBool("Run", false);
+        anim.SetBool("Attack", false);
         state = state.ToUpper();
         switch (state)
         {

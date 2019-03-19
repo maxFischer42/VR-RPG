@@ -26,7 +26,7 @@ public class AttackVariants : MonoBehaviour
         hitSound = normalHit;
         //sets variant to whatever the first collider is, and if the velocity is
         //high enough then the critical effect will apply
-        switch(_collider.gameObject.GetComponent<HitTypeHolder>().myHitType.name)
+        switch(_collider.gameObject.GetComponent<HitTypeHolder>().myHitType.weaponName)
         {
             case "Slash":
                 variant = attackType.Slash;

@@ -12,6 +12,8 @@ public class AIPathfinder : MonoBehaviour
     public GameObject playerObject;
     private NavMeshAgent agent;
     private MeshRenderer mrenderer;
+    public AudioClip footstep1, footstep2;
+    public AudioSource feetSource;
 
     //checks whether or not the player is in sight of the child object
     public bool playerTarget;
@@ -23,6 +25,8 @@ public class AIPathfinder : MonoBehaviour
     //this will be applied whether or not the player is being targeted
     private Material defaultMat;
     private Material targetMat;
+
+    private float timer;
 
     private void Awake()
     {
@@ -54,6 +58,16 @@ public class AIPathfinder : MonoBehaviour
         else
         {
             Debug.LogError("Bool can not equal null");
+        }
+        timer += Time.deltaTime;
+        if((playerTarget && timer > (speed.y / 12)|| !playerTarget && timer > (speed.x / 8)) && agent.enabled)
+        {
+            int r = Random.Range(0, 1);
+            timer = 0f;
+            if (r == 0)
+                feetSource.PlayOneShot(footstep1);
+            else
+                feetSource.PlayOneShot(footstep2);
         }
     }
 

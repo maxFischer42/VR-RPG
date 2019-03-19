@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14caa63ff7b9dfc41a88f6cfe7b37381, type: 3}
   m_Name: Slash
   m_EditorClassIdentifier: 
+  weaponName: Slash

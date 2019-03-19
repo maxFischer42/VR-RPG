@@ -8,4 +8,5 @@ public class HitTypeHolder : MonoBehaviour
     //this should correspond to what part of the weapon this is
     public HitTypes myHitType;
     public int baseDmg;
+
 }

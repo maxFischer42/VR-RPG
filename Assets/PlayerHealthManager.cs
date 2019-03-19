@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using OVR.OpenVR;
+using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
 {
@@ -29,7 +26,7 @@ public class PlayerHealthManager : MonoBehaviour
         if (!isDead)
         {
             healTimer += Time.deltaTime;
-            if (healTimer > 3f && currentHealth < maxHealth)
+            if (healTimer > 10f && currentHealth < maxHealth)
             {
                 currentHealth++;
             }
@@ -70,4 +67,6 @@ public class PlayerHealthManager : MonoBehaviour
         isDead = true;
         healthBar.handleRect.GetComponent<Image>().enabled = false;
     }
+
+    
 }
