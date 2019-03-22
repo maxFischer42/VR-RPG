@@ -9,4 +9,5 @@ public class CrossbowBolt : Item
     public BoltType boltType;
     public GameObject hitPrefab;
     public Material trail;
+    public int damage;
 }

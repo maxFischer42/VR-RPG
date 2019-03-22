@@ -145,6 +145,10 @@ public class Crossbow : MonoBehaviour
                     smokeObj.GetComponent<AudioSource>().PlayOneShot(hitSoundFire);
                 }
                 Destroy(smokeObj, 3f);
+                if(hit.collider.GetComponent<EnemyHealth>())
+                {
+                    hit.collider.GetComponent<EnemyHealth>().health -= drop.GetComponent<BoltHolder>().myBolt.damage;
+                }
             }
         }
     }

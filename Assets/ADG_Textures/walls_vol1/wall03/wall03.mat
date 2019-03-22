@@ -10,7 +10,7 @@ Material:
   m_Name: wall03
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
-  m_LightmapFlags: 5
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -49,7 +49,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 2800000, guid: 21c9e2e3ffe960a42a3a0e04749cfe3a, type: 3}
@@ -57,7 +57,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 04b77c194e789e54eb312abb43bf99b4, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -87,11 +87,13 @@ Material:
     - _ExtrudeHeight: 0.05
     - _GlossFromBrightness_exponent: 8
     - _GlossFromBrightness_multiplicator: 0.3333
-    - _Glossiness: 0.225
+    - _GlossMapScale: 1
+    - _Glossiness: 0.232
+    - _GlossyReflections: 1
     - _LightmapShading: 0.7
     - _Metallic: 0
     - _Mode: 0
-    - _OcclusionStrength: 0.5
+    - _OcclusionStrength: 1
     - _Parallax: 0.010597015
     - _RMS: 0.06595752
     - _Rot: 0
@@ -103,6 +105,8 @@ Material:
     - _ShadowSmoothing: 1.9409615
     - _Shininess: 0.61046314
     - _SidewallTextureOffset: -1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseAlpha: 1
