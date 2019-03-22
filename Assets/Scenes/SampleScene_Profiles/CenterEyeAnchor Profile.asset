@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 114400460419169576}
   - {fileID: 114887914139253716}
   - {fileID: 114087311318060298}
+  - {fileID: 114720847807662472}
+  - {fileID: 114106406630274954}
 --- !u!114 &114087311318060298
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1327,6 +1329,34 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &114106406630274954
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 0
+    value: 10
+  aperture:
+    overrideState: 0
+    value: 5.6
+  focalLength:
+    overrideState: 0
+    value: 50
+  kernelSize:
+    overrideState: 0
+    value: 1
 --- !u!114 &114400460419169576
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1345,7 +1375,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 23
+    value: 20
   threshold:
     overrideState: 1
     value: 1
@@ -1374,6 +1404,43 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &114720847807662472
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
+  m_Name: AutoExposure
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  filtering:
+    overrideState: 1
+    value: {x: 50, y: 95}
+  minLuminance:
+    overrideState: 1
+    value: 0
+  maxLuminance:
+    overrideState: 1
+    value: 0
+  keyValue:
+    overrideState: 1
+    value: 1
+  eyeAdaptation:
+    overrideState: 1
+    value: 0
+  speedUp:
+    overrideState: 1
+    value: 2
+  speedDown:
+    overrideState: 1
+    value: 1
 --- !u!114 &114887914139253716
 MonoBehaviour:
   m_ObjectHideFlags: 3
