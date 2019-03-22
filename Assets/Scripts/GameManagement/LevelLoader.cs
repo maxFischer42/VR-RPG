@@ -21,7 +21,7 @@ public class LevelLoader : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SceneManager.LoadScene("AvatarGrab");
+            SceneManager.LoadScene("DistanceGrab");
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {

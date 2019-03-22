@@ -51,15 +51,19 @@ public class EnemyAnimator : MonoBehaviour
         switch (state)
         {
             case "IDLE":
+                Debug.Log("Set animation state to IDLE");
                 currentState = EnemyState.Idle;
                 break;
             case "WALK":
+                Debug.Log("Set animation state to WALK");
                 currentState = EnemyState.Walk;
                 break;
             case "RUN":
+                Debug.Log("Set animation state to RUN");
                 currentState = EnemyState.Run;
                 break;
             case "ATTACK":
+                Debug.Log("Set animation state to ATTACK");
                 currentState = EnemyState.Attack;
                 break;
         }

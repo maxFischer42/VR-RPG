@@ -39,7 +39,7 @@ public class AIPathfinder : MonoBehaviour
 
     public void Update()
     {
-        if (!playerTarget)
+        if (!playerTarget && agent.enabled)
         {
             agent.speed = speed.x;
             agent.SetDestination(currentTarget.transform.position);
@@ -48,7 +48,7 @@ public class AIPathfinder : MonoBehaviour
             if (Mathf.Abs(agent.velocity.x) < 0.1f && Mathf.Abs(agent.velocity.z) < 0.1f)
                 ChangeTarget();
         }
-        else if(playerTarget)
+        else if(playerTarget && agent.enabled)
         {
 //            mrenderer.material = targetMat;
             agent.speed = speed.y;
