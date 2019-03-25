@@ -319,7 +319,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   throwMultiplier: 2
-  sendMessage: 0
+  sendMessage: 1
   messageReciever: {fileID: 1975804973}
   voidName: SetDifficulty
   messageName: 1
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   throwMultiplier: 2
-  sendMessage: 0
+  sendMessage: 1
   messageReciever: {fileID: 1975804973}
   voidName: SetDifficulty
   messageName: 0
@@ -4079,7 +4079,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   throwMultiplier: 2
-  sendMessage: 0
+  sendMessage: 1
   messageReciever: {fileID: 1975804973}
   voidName: SetDifficulty
   messageName: 2
