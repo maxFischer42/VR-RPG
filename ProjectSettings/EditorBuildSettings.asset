@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Oculus/SampleFramework/Usage/CustomControllers.unity
     guid: e0f49aa4174f98941b88699b5fecddc0
+  - enabled: 1
+    path: Assets/Area1.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
