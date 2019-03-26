@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bolt
   - EnemyWeapon
+  - TurbineKey
   layers:
   - Default
   - TransparentFX
