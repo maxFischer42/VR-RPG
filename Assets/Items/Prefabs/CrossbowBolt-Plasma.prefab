@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2174688215592303822}
   m_LocalRotation: {x: -0, y: 0.38268346, z: -0, w: 0.9238795}
   m_LocalPosition: {x: 2.3698, y: 1.1409, z: 17.6436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 5404596399452719521}
   - {fileID: 3971562597675356310}
@@ -75,6 +75,10 @@ MonoBehaviour:
   - {fileID: 1464501229648061216}
   - {fileID: 3756504371278759929}
   throwMultiplier: 1
+  sendMessage: 0
+  messageReciever: {fileID: 0}
+  voidName: 
+  messageName: 
 --- !u!135 &2174688215592303669
 SphereCollider:
   m_ObjectHideFlags: 0
