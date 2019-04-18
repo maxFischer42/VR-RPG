@@ -5,6 +5,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public float speed;
+    public bool noY;
     public Vector3 velocity;
     public Rigidbody rb;
 
@@ -20,6 +21,8 @@ public class Controller : MonoBehaviour
 
         //save the added and normalized vectors as the velocity
         Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
+        if(noY)
+            _velocity = new Vector3(_velocity.x,0f,_velocity.z);
         velocity = _velocity;
     }
 

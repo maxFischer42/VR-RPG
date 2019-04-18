@@ -9,6 +9,9 @@ public class Turbine : MonoBehaviour
     public AudioSource aud;
     public int keys = 3;
 
+    public GameObject full;
+    public GameObject empty;
+
 
     void OnTriggerEnter(Collider collider)
     {
@@ -29,5 +32,7 @@ public class Turbine : MonoBehaviour
         {
             turbineCogs[i].enabled = true;
         }
+        full.SetActive(false);
+        empty.SetActive(true);
     }
 }

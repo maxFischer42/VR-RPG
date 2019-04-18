@@ -135,6 +135,7 @@ public class Crossbow : MonoBehaviour
             isLoaded = false;
             if(hit.collider)
             {
+                hit.collider.SendMessage("RecieveArrow", "HIT");
                 line.SetPosition(1, hit.point);
                 Instantiate(drop, hit.point, transform.rotation);
                 GameObject smokeObj = (GameObject)Instantiate(myBolt.hitPrefab, hit.point, Quaternion.identity);

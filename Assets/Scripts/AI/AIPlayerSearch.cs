@@ -13,7 +13,7 @@ public class AIPlayerSearch : MonoBehaviour
     private void Start()
     {
         pathfinder = gameObject.transform.parent.GetComponent<AIPathfinder>();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("PlayerNull");
         line = GetComponent<LineRenderer>();
     }
 
@@ -28,7 +28,7 @@ public class AIPlayerSearch : MonoBehaviour
             {
                 
                 line.SetPosition(1, hit.point);
-                if (hit.collider.gameObject.name == "Player")
+                if (hit.collider.gameObject.name == "PlayerNull")
                 {
                     RelayPlayer(true);
                     
