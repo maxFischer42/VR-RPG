@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Area2.unity
     guid: fad3f6086cd3af14d8df8b417a441c44
+  - enabled: 1
+    path: Assets/Area3.unity
+    guid: c10e546306246d944b59c3139a39f780
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -137,6 +137,10 @@ public class OVRGrabbable : MonoBehaviour
         {
             gameObject.SendMessage("CrossbowGrab", hand.gameObject.name);
         }
+        if(gameObject.name == "Helmet")
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>

@@ -9,6 +9,7 @@ public class AIPlayerSearch : MonoBehaviour
     public float maxDistance;
     public LayerMask layerMask;
     private LineRenderer line;
+    public GameObject notice;
 
     private void Start()
     {
@@ -19,18 +20,34 @@ public class AIPlayerSearch : MonoBehaviour
 
     public void Update()
     {
+        if(GameObject.Find("PlayerNull").GetComponent<helmet>())
+        {
+            if(GameObject.Find("PlayerNull").GetComponent<helmet>().alert)
+            {
+                RelayPlayer(true);
+                notice.SetActive(true);
+                return;
+            }
+        }
         RaycastHit hit;
         Vector3 direction = player.transform.position - transform.position;
         line.SetPosition(0, transform.position);
         if (Physics.Raycast(transform.position, direction, out hit, maxDistance, layerMask))
         {
             if(hit.collider)
-            {
-                
+            {               
                 line.SetPosition(1, hit.point);
                 if (hit.collider.gameObject.name == "PlayerNull")
                 {
-                    RelayPlayer(true);
+                    if (hit.collider.GetComponent<helmet>())
+                    {
+                        if (hit.collider.GetComponent<helmet>().isOn)
+                        {
+                            return;
+                        }
+                    }
+
+                        RelayPlayer(true);
                     
                 }
                 else

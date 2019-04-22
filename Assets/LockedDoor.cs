@@ -16,7 +16,7 @@ public class LockedDoor : MonoBehaviour
             keyObj[keysIn].SetActive(true);
             if(keysIn == 3)
             {
-                SceneManager.LoadScene("Opening");
+                SceneManager.LoadScene("Area3");
             }
         }
     }
