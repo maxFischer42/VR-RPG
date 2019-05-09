@@ -6,9 +6,20 @@ public class helmet : MonoBehaviour
 {
     public bool isOn = false;
     public bool alert = false;
-    public Behaviour counter;
+    public timer counter;
     public AudioSource musicPlayer;
     public AudioClip encouter;
+    public bool test;
+
+
+    public void Update()
+    {
+        if(test)
+        {
+            test = false;
+            StateChange("on");
+        }
+    }
 
     public void StateChange(string message)
     {

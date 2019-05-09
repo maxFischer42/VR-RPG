@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SetDifficulty : MonoBehaviour
 {
-    public void loadScene()
+    public void loadScene(string scene)
     {
-        SceneManager.LoadScene("Area1");
+        SceneManager.LoadScene(scene);
     }
 }

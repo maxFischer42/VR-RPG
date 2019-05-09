@@ -21,14 +21,17 @@ public class SaveData : MonoBehaviour
         { 
         case "0":
             difficulty = 0;
+            PlayerPrefs.SetInt("Diff", 0);
             break;
         case "1":
             difficulty = 1;
-            break;
+                PlayerPrefs.SetInt("Diff", 1);
+                break;
         case "2":
             difficulty = 2;
-            break;
+                PlayerPrefs.SetInt("Diff", 2);
+                break;
         }
-        GetComponent<SetDifficulty>().loadScene();
+        GetComponent<SetDifficulty>().loadScene("Area1");
     }
 }

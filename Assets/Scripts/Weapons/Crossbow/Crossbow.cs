@@ -29,7 +29,7 @@ public class Crossbow : MonoBehaviour
 
     private CrossbowBolt myBolt;
     private GameObject drop;
-  //public GameObject hitEffect;
+    //public GameObject hitEffect;
 
     public Text debugHand;
 
@@ -129,8 +129,9 @@ public class Crossbow : MonoBehaviour
         line.enabled = true;
         line.SetPosition(0, firePosition.position);
         Vector3 _direction = fireTarget.position - firePosition.position;
+        Debug.Log(_direction);
         StartCoroutine(DelaySmoke());
-        if(Physics.Raycast(firePosition.position,_direction,out hit, 99f))
+        if(Physics.Raycast(firePosition.position,_direction,out hit, 99999f))
         {
             isLoaded = false;
             if(hit.collider)

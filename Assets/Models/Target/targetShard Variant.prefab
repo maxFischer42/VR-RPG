@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f4dac796c9ad63543a8e71cfadaff651, type: 3}
       propertyPath: m_Name
-      value: targetShard
+      value: targetShard Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4dac796c9ad63543a8e71cfadaff651, type: 3}
       propertyPath: m_LocalPosition.x

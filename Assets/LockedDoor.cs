@@ -12,8 +12,8 @@ public class LockedDoor : MonoBehaviour
         if(other.gameObject.tag == "GuardKey")
         {
             Destroy(other.gameObject);
-            keysIn += 1;
             keyObj[keysIn].SetActive(true);
+            keysIn += 1;
             if(keysIn == 3)
             {
                 SceneManager.LoadScene("Area3");

@@ -7,6 +7,24 @@ public class EnemyHealth : MonoBehaviour
 
     public int health = 50;
     public GameObject corpse;
+    public bool medium = true;
+    public bool easy = true;
+
+    private void Start()
+    {
+        int diff = PlayerPrefs.GetInt("Diff");
+        switch(diff)
+        {
+            case 0:
+                if (!easy)
+                    gameObject.SetActive(false);
+                break;
+            case 1:
+                if (!medium)
+                    gameObject.SetActive(false);
+                break;
+        }
+    }
 
     void OnTriggerEnter (Collider collider)
     {
