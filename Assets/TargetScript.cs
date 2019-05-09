@@ -43,7 +43,7 @@ public class TargetScript : MonoBehaviour
                         m = 2;
                         break;
                 }
-                GameObject.Find("GameManager").SendMessage("SetDifficulty", m);
+                GameObject.Find("GameManager").SendMessage("SetDifficulty", m.ToString());
             }
 
 
