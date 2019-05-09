@@ -342,7 +342,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67108
+  m_Name: pb_Mesh107550
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1504,6 +1504,11 @@ PrefabInstance:
       propertyPath: m_snapOffset
       value: 
       objectReference: {fileID: 329448678}
+    - target: {fileID: 847001276481009021, guid: 4a25b4eb83be8494199df191386ed670,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a25b4eb83be8494199df191386ed670, type: 3}
 --- !u!1 &592617224
@@ -4851,6 +4856,11 @@ PrefabInstance:
       propertyPath: m_snapOffset
       value: 
       objectReference: {fileID: 329448678}
+    - target: {fileID: 847001276481009021, guid: 4a25b4eb83be8494199df191386ed670,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a25b4eb83be8494199df191386ed670, type: 3}
 --- !u!1001 &984958540
@@ -5512,7 +5522,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66802
+  m_Name: pb_Mesh107244
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6377,6 +6387,11 @@ PrefabInstance:
       propertyPath: m_snapOffset
       value: 
       objectReference: {fileID: 329448678}
+    - target: {fileID: 847001276481009021, guid: 4a25b4eb83be8494199df191386ed670,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a25b4eb83be8494199df191386ed670, type: 3}
 --- !u!1 &1975804973
