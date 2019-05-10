@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8156406235820271068}
   - component: {fileID: 8156406235821598204}
   - component: {fileID: 8156406235822565180}
-  - component: {fileID: 2402505817740674876}
   - component: {fileID: 7260031038863385542}
   - component: {fileID: 5994723345425668228}
   - component: {fileID: 3740360351012329440}
+  - component: {fileID: 796644365018283116}
   m_Layer: 0
   m_Name: TurbineKey
   m_TagString: TurbineKey
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2402505817740674876
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8156406235820636668}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 82ed42e4b95e31544950ff39fc839d7f, type: 3}
 --- !u!114 &7260031038863385542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +157,16 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!65 &796644365018283116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156406235820636668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.06, z: -0.04}
+  m_Center: {x: 0.00951024, y: -9.313224e-10, z: 0.007758828}

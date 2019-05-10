@@ -4822,6 +4822,9 @@ MonoBehaviour:
   test: 0
   isSpike: 0
   spikeRig: {fileID: 0}
+  isLoadGame: 0
+  difficulty: 0
+  glow: {fileID: 6765740952586464539}
   endgame: {fileID: 0}
 --- !u!54 &2132349260
 Rigidbody:
@@ -5500,6 +5503,12 @@ PrefabInstance:
 --- !u!4 &6765740952584695803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c78015ce25239ba4988efb5a808f7a47,
+    type: 3}
+  m_PrefabInstance: {fileID: 6765740952584303995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6765740952586464539 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: c78015ce25239ba4988efb5a808f7a47,
     type: 3}
   m_PrefabInstance: {fileID: 6765740952584303995}
   m_PrefabAsset: {fileID: 0}

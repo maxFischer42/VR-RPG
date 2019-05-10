@@ -15,6 +15,7 @@ public class TargetScript : MonoBehaviour
     public Rigidbody spikeRig;
     public bool isLoadGame;
     public int difficulty = 0;
+    public Renderer glow;
 
     public EndGame endgame;
     public void Update()
@@ -58,7 +59,8 @@ public class TargetScript : MonoBehaviour
             }
             else
             {
-            spawnObject.SetActive(true);
+                glow.enabled = false;
+                spawnObject.SetActive(true);
                 m_renderer.enabled = false;
                 m_collider.enabled = false;
                 m_particleSystem.SetActive(true);
