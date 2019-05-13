@@ -3,8 +3,7 @@ Sound effects: Super Smash Brothers Melee
 Opening theme: Field - Night ~ Legend of Zelda: Breath of the Wild
 Floor 1 theme: Tephra Cave ~ Xenoblade Chronicles
 Floor 2 theme: Ether Mine ~ Xenoblade Chronicles
-Floor 3 theme: Spirit Crucible Elyps ~ Xenoblade Chronicles 2
-Floor 4 theme: 
+Floor 3/4 theme: Spirit Crucible Elyps ~ Xenoblade Chronicles 2
 Floor 5 theme: Thunderblight Ganon Theme ~ Legend of Zelda: Breath of the Wild
 
 
